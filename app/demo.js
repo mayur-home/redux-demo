@@ -1,19 +1,22 @@
-import {createStore} from 'redux';
+import {combineReducers, createStore} from 'redux';
 
-const reducer = (store, action) => {
-	if (action.type === 'INC') {
-		store++;
-	} else if (action.type === 'DEC') {
-		store--;
-	}
-
+const userReducer = (store = {}, action) => {
 	return store;
 }
 
-const store = createStore(reducer, 0);
+const tweetsReducer = (store = [], action) => {
+	return store;
+}
+
+const reducers = combineReducers({
+	user: userReducer,
+	tweets: tweetsReducer
+});
+
+const store = createStore(reducers);
 
 store.subscribe(() => {
-	console.log("Store Changed:", store.getStorestore());
+	console.log("Store Changed:", store.getState());
 });
 
 store.dispatch({type: 'INC'});
