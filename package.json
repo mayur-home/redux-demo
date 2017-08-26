@@ -1,0 +1,22 @@
+{
+	"name": "redux-demo",
+	"version": "0.0.1",
+	"main": "index.js",
+	"author": "mayur.mcc@gmail.com",
+	"license": "MIT",
+	"scripts": {
+		"webpack": "webpack",
+		"serve": "webpack-dev-server"
+	},
+	"dependencies": {
+		"redux": "^3.7.2"
+	},
+	"devDependencies": {
+		"babel-core": "^6.24.1",
+		"babel-loader": "^7.0.0",
+		"babel-preset-env": "^1.5.1",
+		"babel-preset-es2015": "^6.24.1",
+		"webpack": "^3.5.5",
+		"webpack-dev-server": "^2.7.1"
+	}
+}
