@@ -13,7 +13,7 @@ const reducer = (store, action) => {
 const store = createStore(reducer, 0);
 
 store.subscribe(() => {
-	console.log("Store Changed:", store.getStorestore());
+	console.log("Store Changed:", store.getState());
 });
 
 store.dispatch({type: 'INC'});
